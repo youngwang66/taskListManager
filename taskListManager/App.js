@@ -2,6 +2,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer } from 'react-navigation';
 import HomeScreen from "./pages/Home";
 import ProfileScreen from "./pages/Profile";
+import CameraScreen from "./pages/Camera";
 
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons'; // Assuming you have the Ionicons library installed
@@ -23,6 +24,15 @@ const TabNavigator = createBottomTabNavigator(
         tabBarLabel: 'Profile',
         tabBarIcon: ({ tintColor }) => (
           <Ionicons name="person" size={24} color={tintColor} />
+        ),
+      },
+    },
+    Camera: {
+      screen: CameraScreen,
+      navigationOptions: {
+        tabBarLabel: 'Camera',
+        tabBarIcon: ({ tintColor }) => (
+          <Ionicons name="Camera" size={24} color={tintColor} />
         ),
       },
     },
